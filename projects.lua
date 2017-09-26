@@ -15,7 +15,7 @@ workspace(path.getname(os.realpath(".")))
         toolset "v120_xp"
     end
 
-    --include (BOOK_CODE_PATH .. "/common.lua")    
+    include (BOOK_CODE_PATH .. "/common.lua")    
     
 
     function create_sdl_project(name, dir)        
