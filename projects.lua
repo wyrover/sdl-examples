@@ -15,7 +15,7 @@ workspace(path.getname(os.realpath(".")))
         toolset "v120_xp"
     end
 
-    include (BOOK_CODE_PATH .. "/common.lua")    
+    --include (BOOK_CODE_PATH .. "/common.lua")    
     
 
     function create_sdl_project(name, dir)        
@@ -96,6 +96,10 @@ workspace(path.getname(os.realpath(".")))
             has_stdafx("AlienAttack", "src")          
 
         
+    
+
+        create_sdl_project("Breakout", "src")
+        create_sdl_project("Pong", "src")
 
 --        create_console_project("sdl2-init", "src")
 --            includedirs
