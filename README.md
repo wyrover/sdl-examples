@@ -26,3 +26,19 @@
 ## src/hello-sdl2
 
 
+
+- https://github.com/srmeier/KnightOnline
+- https://github.com/pieisgood/SDL2-GUI
+- https://github.com/dashed/tetris-sdl-c
+- https://github.com/swarminglogic/sdl2-gamedev
+- https://github.com/swarminglogic/sdl2-cross
+- https://github.com/ocornut/imgui
+- https://github.com/vurtun/nuklear
+- https://github.com/gotnospirit/cef3-sdl2
+- https://github.com/LiquidityC/flat
+- https://github.com/brandonto/sdl-space-shooter
+- https://github.com/SmallHedgehog/Games-Tetris
+- https://github.com/AlynxZhou/flipclock
+- http://extra-a.github.io/
+- https://github.com/CecilHarvey/sdlbird
+- https://github.com/bjornus/Cerium
