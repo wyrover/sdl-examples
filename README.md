@@ -21,6 +21,7 @@
 - [sdl 中文教程](http://kelvmiao.info/sdl-tutorial-cn/contents.html)
 - http://headerphile.com/category/sdl2/page/2/
 - http://rembound.com/articles
+- https://github.com/gametutorials/tutorials
 
 ## src/hello-sdl2
 
