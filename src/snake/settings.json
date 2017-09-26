@@ -1,0 +1,150 @@
+{
+    "STATES": {
+        "MENU": {
+            "TEXTURES": {
+                "texture": [{
+                        "filename": "Assets/play.png",
+                        "ID": "playbutton"
+                    },
+                    {
+                        "filename": "Assets/exit.png",
+                        "ID": "exitbutton"
+                    }
+                ]
+            },
+            "OBJECTS": {
+                "object": [{
+                        "type": "MenuButton",
+                        "x": 250,
+                        "y": 100,
+                        "width": 150,
+                        "height": 91,
+                        "textureID": "playbutton",
+                        "numFrames": 0,
+                        "callbackID": 1,
+                        "animSpeed": 1
+                    },
+                    {
+                        "type": "MenuButton",
+                        "x": 250,
+                        "y": 300,
+                        "width": 150,
+                        "height": 100,
+                        "textureID": "exitbutton",
+                        "numFrames": 0,
+                        "callbackID": 2,
+                        "animSpeed": 1
+                    }
+                ]
+            }
+        },
+        "PLAY": {
+            "TEXTURES":{
+                "texture":[{
+                    "filename":"Assets/all_colors.png",
+                    "ID":"all_colors"
+                    }]
+            },
+            "OBJECTS":{
+                "object":[{
+                    "type":"Block",
+                    "x":300,
+                    "y":200,
+                    "width":20,
+                    "height":20,
+                    "textureID":"all_colors",
+                    "numFrames":12,
+                    "animSpeed": 0,
+                    "callbackID": 0
+                    }]
+            }
+        },
+        "PAUSE": {
+            "TEXTURES":{
+                "texture":[{
+                    "filename":"Assets/resume.png",
+                    "ID":"resumebutton"
+                    },
+                {
+                    "filename":"Assets/mainmenu.png",
+                    "ID":"mainbutton"
+                    }]
+            },
+            "OBJECTS":{
+                "object":[{
+                    "type":"MenuButton",
+                    "x":250,
+                    "y":100,
+                    "width":150,
+                    "height":90,
+                    "textureID":"mainbutton",
+                    "numFrames":3,
+                    "animSpeed": 1,
+                    "callbackID": 1
+                    },
+                {
+                    "type":"MenuButton",
+                    "x":250,
+                    "y":200,
+                    "width":150,
+                    "height":90,
+                    "textureID":"resumebutton",
+                    "numFrames":3,
+                    "animSpeed": 1,
+                    "callbackID": 2
+                    }]
+            }
+        },
+        "GAMEOVER": {
+            "TEXTURES":{
+                "texture":[{
+                    "filename":"Assets/gg.png",
+                    "ID":"gameovertext"
+                    },
+                {
+                    "filename":"Assets/mainmenu.png",
+                    "ID":"mainbutton"
+                    },
+                {
+                    "filename":"Assets/restart.png",
+                    "ID":"restartbutton"
+                    }]
+            },
+            "OBJECTS":{
+                "object":[{
+                    "type":"AnimatedGraphic",
+                    "x":250,
+                    "y":100,
+                    "width":150,
+                    "height":121,
+                    "textureID":"gameovertext",
+                    "numFrames":3,
+                    "animSpeed": 20,
+                    "callbackID": 0
+                    },
+                {
+                    "type":"MenuButton",
+                    "x":250,
+                    "y":200,
+                    "width":150,
+                    "height":90,
+                    "textureID":"mainbutton",
+                    "numFrames":3,
+                    "animSpeed": 1,
+                    "callbackID": 1
+                    },
+                {
+                    "type":"MenuButton",
+                    "x":250,
+                    "y":300,
+                    "width":150,
+                    "height":121,
+                    "textureID":"restartbutton",
+                    "numFrames":3,
+                    "animSpeed": 1,
+                    "callbackID": 2
+                    }]
+            }
+        }
+    }
+}

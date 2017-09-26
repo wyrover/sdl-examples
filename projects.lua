@@ -100,6 +100,51 @@ workspace(path.getname(os.realpath(".")))
 
         create_sdl_project("Breakout", "src")
         create_sdl_project("Pong", "src")
+        create_sdl_project("Pong-A-Long2", "src")
+        create_sdl_project("uMario", "src")
+
+
+        project "snake"          
+            kind "ConsoleApp"                                             
+            files
+            {                                  
+                "src/%{prj.name}/**.h",
+                "src/%{prj.name}/**.cpp", 
+                "src/%{prj.name}/**.c", 
+                "src/%{prj.name}/**.rc",
+                
+            }
+            removefiles
+            {               
+            }
+            includedirs
+            {               
+                "3rdparty",  
+                
+            }         
+            includedirs
+            {
+                "3rdparty/SDL2-2.0.5/include",
+                "3rdparty/SDL2_image-2.0.1/include",
+                "3rdparty/SDL2_ttf-2.0.14/include",
+                "3rdparty/SDL2_mixer-2.0.1/include",
+                "3rdparty/SDL2_net-2.0.1/include",
+                "%{THIRD_PARTY}/zlib"
+
+            }
+            links
+            {
+                "3rdparty/SDL2-2.0.5/lib/x86/SDL2.lib",
+                "3rdparty/SDL2_ttf-2.0.14/lib/x86/SDL2_ttf.lib",
+                "3rdparty/SDL2_image-2.0.1/lib/x86/SDL2_image.lib",
+                "3rdparty/SDL2_mixer-2.0.1/lib/x86/SDL2_mixer.lib",
+                "3rdparty/SDL2_net-2.0.1/lib/x86/SDL2_net.lib",                
+            }
+            link_libs
+            {
+                "zlib1.lib"
+            }
+            has_stdafx("AlienAttack", "src")  
 
 --        create_console_project("sdl2-init", "src")
 --            includedirs
