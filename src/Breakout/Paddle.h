@@ -4,31 +4,22 @@
 // http://rembound.com/articles/the-breakout-tutorial
 // ------------------------------------------------------------
 
-#ifndef BALL_H_
-#define BALL_H_
+#ifndef PADDLE_H_
+#define PADDLE_H_
 
 #include "Entity.h"
 
-#include <math.h>
-
-// Define a ball speed in pixels per second
-const float BALL_SPEED = 550;
-
-class Ball: public Entity {
+class Paddle: public Entity
+{
 public:
-    Ball(SDL_Renderer* renderer);
-    ~Ball();
+    Paddle(SDL_Renderer* renderer);
+    ~Paddle();
 
     void Update(float delta);
     void Render(float delta);
 
-    void SetDirection(float dirx, float diry);
-
-    float dirx, diry;
-
 private:
     SDL_Texture* texture;
-
 };
 
 #endif

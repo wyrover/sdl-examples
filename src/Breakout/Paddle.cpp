@@ -6,28 +6,29 @@
 
 #include "Paddle.h"
 
-Paddle::Paddle(SDL_Renderer* renderer): Entity(renderer) {
-    SDL_Surface* surface = IMG_Load("paddle.png");
+Paddle::Paddle(SDL_Renderer* renderer): Entity(renderer)
+{
+    SDL_Surface* surface = IMG_Load("breakout/assets/paddle.png");
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
-
     width = 128;
     height = 32;
-
     y = 560;
 }
 
-Paddle::~Paddle() {
+Paddle::~Paddle()
+{
     // Clean resources
     SDL_DestroyTexture(texture);
 }
 
 
-void Paddle::Update(float delta) {
-
+void Paddle::Update(float delta)
+{
 }
 
-void Paddle::Render(float delta) {
+void Paddle::Render(float delta)
+{
     SDL_Rect rect;
     rect.x = (int)(x + 0.5f);
     rect.y = (int)(y + 0.5f);

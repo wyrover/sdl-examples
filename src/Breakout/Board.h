@@ -17,13 +17,15 @@
 #define BOARD_BRWIDTH 64
 #define BOARD_BRHEIGHT 24
 
-class Brick {
+class Brick
+{
 public:
     int type;
     bool state;
 };
 
-class Board: public Entity {
+class Board: public Entity
+{
 public:
     Board(SDL_Renderer* renderer);
     ~Board();

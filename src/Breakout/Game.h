@@ -18,7 +18,8 @@
 
 #define FPS_DELAY 500
 
-class Game {
+class Game
+{
 public:
     Game();
     ~Game();
