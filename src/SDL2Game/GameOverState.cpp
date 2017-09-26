@@ -25,16 +25,12 @@ bool GameOverState::onEnter()
     // parse the state
     StateParser stateParser;
     stateParser.parseState("assets/conan.xml", s_gameOverID, &m_gameObjects, &m_textureIDList);
-
     m_callbacks.push_back(0);
     m_callbacks.push_back(s_gameOverToMain);
     m_callbacks.push_back(s_restartPlay);
-
     // set the callbacks for menu items
     setCallbacks(m_callbacks);
-
     m_loadingComplete = true;
-
     std::cout << "entering GameOverState\n";
     return true;
 }
@@ -54,10 +50,8 @@ void GameOverState::setCallbacks(const std::vector<Callback>& callbacks)
 
 bool GameOverState::onExit()
 {
-    if(m_loadingComplete && !m_gameObjects.empty())
-    {
-        for(int i = 0; i < m_gameObjects.size(); i++)
-        {
+    if (m_loadingComplete && !m_gameObjects.empty()) {
+        for (int i = 0; i < m_gameObjects.size(); i++) {
             m_gameObjects[i]->clean();
             delete m_gameObjects[i];
         }
@@ -68,13 +62,11 @@ bool GameOverState::onExit()
     std::cout << m_gameObjects.size();
 
     // clear the texture manager
-    for(int i = 0; i < m_textureIDList.size(); i++)
-    {
+    for (int i = 0; i < m_textureIDList.size(); i++) {
         TheTextureManager::Instance()->clearFromTextureMap(m_textureIDList[i]);
     }
 
     TheInputHandler::Instance()->reset();
-
     std::cout << "exiting GameOverState\n";
     return true;
 }

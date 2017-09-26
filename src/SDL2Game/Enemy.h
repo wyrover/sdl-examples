@@ -7,7 +7,10 @@
 class Enemy : public PlatformerObject
 {
 public:
-    virtual std::string type() { return "Enemy"; }
+    virtual std::string type()
+    {
+        return "Enemy";
+    }
 
 protected:
     int m_health;

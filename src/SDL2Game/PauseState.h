@@ -15,7 +15,10 @@ public:
     virtual bool onEnter();
     virtual bool onExit();
 
-    virtual std::string getStateID() const { return s_pauseID; }
+    virtual std::string getStateID() const
+    {
+        return s_pauseID;
+    }
 
 private:
     static void s_pauseToMain();

@@ -11,20 +11,19 @@
 #include "Game.h"
 
 ShooterObject::ShooterObject() :    GameObject(),
-                                    m_bulletFiringSpeed(0),
-                                    m_bulletCounter(0),
-                                    m_moveSpeed(0),
-                                    m_dyingTime(0),
-                                    m_dyingCounter(0),
-                                    m_bPlayedDeathSound(false)
+    m_bulletFiringSpeed(0),
+    m_bulletCounter(0),
+    m_moveSpeed(0),
+    m_dyingTime(0),
+    m_dyingCounter(0),
+    m_bPlayedDeathSound(false)
 {
 }
 
 void ShooterObject::load(std::unique_ptr<LoaderParams> const &pParams)
 {
     // get position
-    m_position = Vector2D(pParams->getX(),pParams->getY());
-    
+    m_position = Vector2D(pParams->getX(), pParams->getY());
     // get drawing variables
     m_width = pParams->getWidth();
     m_height = pParams->getHeight();
@@ -48,11 +47,11 @@ void ShooterObject::update()
 
 void ShooterObject::doDyingAnimation()
 {
-    m_currentFrame = int(((SDL_GetTicks() / (1000/ 10)) % m_numFrames));
-    
-    if(m_dyingCounter == m_dyingTime)
-    {
+    m_currentFrame = int(((SDL_GetTicks() / (1000 / 10)) % m_numFrames));
+
+    if (m_dyingCounter == m_dyingTime) {
         m_bDead = true;
     }
+
     m_dyingCounter++;
 }

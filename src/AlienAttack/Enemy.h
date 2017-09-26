@@ -16,13 +16,16 @@
 class Enemy : public ShooterObject
 {
 public:
-    
-    virtual std::string type() { return "Enemy"; }
-    
+
+    virtual std::string type()
+    {
+        return "Enemy";
+    }
+
 protected:
-    
+
     int m_health;
-    
+
     Enemy() : ShooterObject() {}
     virtual ~Enemy() {}
 };

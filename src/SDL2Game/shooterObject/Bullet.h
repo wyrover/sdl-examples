@@ -16,7 +16,10 @@ public:
 
     virtual ~PlayerBullet() {}
 
-    virtual std::string type() { return "PlayerBullet"; }
+    virtual std::string type()
+    {
+        return "PlayerBullet";
+    }
 
     virtual void load(std::unique_ptr<LoaderParams> pParams, Vector2D heading)
     {
@@ -43,15 +46,11 @@ public:
 
     virtual void update()
     {
-        if(!m_bDying)
-        {
+        if (!m_bDying) {
             m_velocity.setX(m_heading.getX());
             m_velocity.setY(m_heading.getY());
-
             ShooterObject::update();
-        }
-        else
-        {
+        } else {
             m_velocity.setX(0);
             m_velocity.setY(0);
             doDyingAnimation();
@@ -77,7 +76,10 @@ public:
 
     virtual ~EnemyBullet() {}
 
-    virtual std::string type() { return "EnemyBullet"; }
+    virtual std::string type()
+    {
+        return "EnemyBullet";
+    }
 };
 
 #endif

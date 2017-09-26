@@ -11,14 +11,17 @@ public:
     virtual void draw();
     virtual void update();
     virtual void load(std::unique_ptr<LoaderParams> const &pParams);
-    
+
     virtual void clean() {} //not implemented in this class
     virtual void collision() {} //not implemented in this class
-    virtual std::string type() { return "SDLGameObject"; }
+    virtual std::string type()
+    {
+        return "SDLGameObject";
+    }
 
 protected:
     ShooterObject();
-    
+
     //draw the animation for the object being destroyed
     void doDyingAnimation();
 

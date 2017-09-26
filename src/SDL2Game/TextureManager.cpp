@@ -5,7 +5,7 @@
 TextureManager* TextureManager::s_pInstance = 0;
 
 bool TextureManager::load(std::string fileName, std::string id,
-    SDL_Renderer* pRenderer)
+                          SDL_Renderer* pRenderer)
 {
     std::cout << "filename:" << fileName << ", id:" << id << std::endl;
     //c_str() converts string to C-like char*.
@@ -28,36 +28,31 @@ bool TextureManager::load(std::string fileName, std::string id,
 }
 
 void TextureManager::draw(std::string id, int x, int y, int width, int height,
-    SDL_Renderer* pRenderer, SDL_RendererFlip flip)
+                          SDL_Renderer* pRenderer, SDL_RendererFlip flip)
 {
     SDL_Rect srcRect;
     SDL_Rect destRect;
-
     destRect.w = width;
     destRect.h = height;
     destRect.x = x;
     destRect.y = y;
-
     srcRect.x = 0;
     srcRect.y = 0;
     srcRect.w = destRect.w;
     srcRect.h = destRect.h;
-
     SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }
 
 void TextureManager::drawFrame(std::string id, int x, int y, int width, int height,
-    int currentRow, int currentFrame, SDL_Renderer* pRenderer,
-    double angle, int alpha, SDL_RendererFlip flip)
+                               int currentRow, int currentFrame, SDL_Renderer* pRenderer,
+                               double angle, int alpha, SDL_RendererFlip flip)
 {
     SDL_Rect srcRect;
     SDL_Rect destRect;
-
     destRect.x = x;
     destRect.y = y;
     destRect.w = width;
     destRect.h = height;
-
     srcRect.x = width * currentFrame;
     srcRect.y = height * currentRow;
     srcRect.w = destRect.w;
@@ -69,21 +64,18 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
 }
 
 void TextureManager::drawTile(std::string id, int margin, int spacing, int x, int y,
-    int width, int height, int currentRow, int currentFrame, SDL_Renderer* pRenderer)
+                              int width, int height, int currentRow, int currentFrame, SDL_Renderer* pRenderer)
 {
     SDL_Rect srcRect;
     SDL_Rect destRect;
-
     srcRect.x = margin + (spacing + width) * currentFrame;
     srcRect.y = margin + (spacing + height) * currentRow;
     srcRect.w = width;
     srcRect.h = height;
-
     destRect.x = x;
     destRect.y = y;
     destRect.w = width;
     destRect.h = height;
-
     SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, SDL_FLIP_NONE);
 }
 
@@ -100,8 +92,7 @@ void TextureManager::clearFromTextureMap(std::string id)
 void TextureManager::printTextureMap()
 {
     for (std::map<std::string, SDL_Texture*>::iterator it = m_textureMap.begin();
-            it != m_textureMap.end(); ++it)
-    {
+         it != m_textureMap.end(); ++it) {
         std::cout << "map:" << it->first << std::endl;
     }
 }

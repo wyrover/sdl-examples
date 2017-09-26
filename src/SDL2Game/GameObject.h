@@ -31,24 +31,51 @@ public:
     virtual std::string type() = 0;
 
     //getters for common variables
-    Vector2D& getPosition() { return m_position; }
-    Vector2D& getVelocity() { return m_velocity; }
+    Vector2D& getPosition()
+    {
+        return m_position;
+    }
+    Vector2D& getVelocity()
+    {
+        return m_velocity;
+    }
 
-    int getWidth() { return m_width; }
-    int getHeight() { return m_height; }
+    int getWidth()
+    {
+        return m_width;
+    }
+    int getHeight()
+    {
+        return m_height;
+    }
 
     //scroll along with tile map
     void scroll(float scrollSpeed) {}
     // is the object currently being updated?
-    bool updating() { return m_bUpdating; }
+    bool updating()
+    {
+        return m_bUpdating;
+    }
     // is the object dead?
-    bool dead() { return m_bDead; }
+    bool dead()
+    {
+        return m_bDead;
+    }
     // is the object doing a death animation?
-    bool dying() { return m_bDying; }
+    bool dying()
+    {
+        return m_bDying;
+    }
     // set whether to update the object or not
-    void setUpdating(bool updating) { m_bUpdating = updating; }
+    void setUpdating(bool updating)
+    {
+        m_bUpdating = updating;
+    }
 
-    void setCollisionLayers(std::vector<TileLayer*>* layers) { m_pCollisionLayers = layers; }
+    void setCollisionLayers(std::vector<TileLayer*>* layers)
+    {
+        m_pCollisionLayers = layers;
+    }
 
 protected:
     GameObject() :
@@ -65,7 +92,6 @@ protected:
         m_angle(0),
         m_alpha(255)
     {
-   
     }
 
     //movement variables

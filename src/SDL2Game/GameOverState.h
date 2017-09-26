@@ -14,7 +14,10 @@ public:
     virtual bool onEnter();
     virtual bool onExit();
 
-    virtual std::string getStateID() const { return s_gameOverID; }
+    virtual std::string getStateID() const
+    {
+        return s_gameOverID;
+    }
 
 private:
     static const std::string s_gameOverID;

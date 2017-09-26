@@ -22,7 +22,6 @@ public:
 protected:
     GameState() : m_loadingComplete(false), m_exiting(false)
     {
-
     }
 
     bool m_loadingComplete;

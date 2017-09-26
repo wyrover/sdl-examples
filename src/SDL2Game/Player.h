@@ -21,7 +21,10 @@ public:
 
     virtual void collision();
 
-    virtual std::string type() { return "Player"; }
+    virtual std::string type()
+    {
+        return "Player";
+    }
 
 private:
 

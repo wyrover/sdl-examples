@@ -37,7 +37,6 @@ public:
         }
 
         m_creators[typeID] = pCreator;
-
         return true;
     }
 
@@ -45,10 +44,12 @@ public:
     {
         std::map<std::string, BaseCreator*>::iterator it = m_creators.find(typeID);
         std::cout << "create:" << typeID << std::endl;
+
         if (it == m_creators.end()) {
             std::cout << "could not find type:" << typeID << std::endl;
             return NULL;
         }
+
         std::cout << "find it:" << typeID << std::endl;
         BaseCreator* pCreator = (*it).second;
         return pCreator->createGameObject();

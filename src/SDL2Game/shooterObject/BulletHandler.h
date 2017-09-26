@@ -11,11 +11,11 @@ public:
 
     static BulletHandler* Instance()
     {
-        if(s_pInstance == 0)
-        {
+        if (s_pInstance == 0) {
             s_pInstance = new BulletHandler();
             return s_pInstance;
         }
+
         return s_pInstance;
     }
 
@@ -27,8 +27,14 @@ public:
 
     void clearBullets();
 
-    const std::vector<PlayerBullet*> getPlayerBullets() { return m_playerBullets; }
-    const std::vector<EnemyBullet*> getEnemyBullets() { return m_enemyBullets; }
+    const std::vector<PlayerBullet*> getPlayerBullets()
+    {
+        return m_playerBullets;
+    }
+    const std::vector<EnemyBullet*> getEnemyBullets()
+    {
+        return m_enemyBullets;
+    }
 
 private:
 

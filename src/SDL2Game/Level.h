@@ -10,8 +10,7 @@
 
 class TileLayer;
 
-struct Tileset
-{
+struct Tileset {
     int firstGridID;
     int tileWidth;
     int tileHeight;
@@ -32,14 +31,32 @@ public:
     void update();
     void render();
 
-    std::vector<Tileset>* getTilesets() { return &m_tilesets; }
-    std::vector<Layer*>* getLayers() { return &m_layers; }    
-    std::vector<TileLayer*>* getCollisionLayers() { return &m_collisionLayers; }
+    std::vector<Tileset>* getTilesets()
+    {
+        return &m_tilesets;
+    }
+    std::vector<Layer*>* getLayers()
+    {
+        return &m_layers;
+    }
+    std::vector<TileLayer*>* getCollisionLayers()
+    {
+        return &m_collisionLayers;
+    }
 
-    const std::vector<TileLayer*>& getCollidableLayers() { return m_collisionLayers; }
+    const std::vector<TileLayer*>& getCollidableLayers()
+    {
+        return m_collisionLayers;
+    }
 
-    Player* getPlayer() { return m_pPlayer; }
-    void setPlayer(Player* pPlayer) { m_pPlayer = pPlayer; }
+    Player* getPlayer()
+    {
+        return m_pPlayer;
+    }
+    void setPlayer(Player* pPlayer)
+    {
+        m_pPlayer = pPlayer;
+    }
 
 private:
 

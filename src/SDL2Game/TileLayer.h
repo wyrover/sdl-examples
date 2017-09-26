@@ -10,28 +10,47 @@ class TileLayer : public Layer
 {
 public:
     TileLayer(int tileSize, int mapWidth, int mapHeight,
-        const std::vector<Tileset>& tilesets);
+              const std::vector<Tileset>& tilesets);
 
     virtual void update(Level* pLevel);
     virtual void render();
 
-    void setTileIDs(const std::vector<std::vector<int> >& data) {
+    void setTileIDs(const std::vector<std::vector<int> >& data)
+    {
         m_tileIDs = data;
     }
 
-    void setTileSize(int tileSize) { m_tileSize = tileSize; }
+    void setTileSize(int tileSize)
+    {
+        m_tileSize = tileSize;
+    }
 
-    void setMapWidth(int mapWidth) { m_mapWidth = mapWidth; }
+    void setMapWidth(int mapWidth)
+    {
+        m_mapWidth = mapWidth;
+    }
 
     Tileset getTilesetByID(int tileID);
 
-    int getTileSize() { return m_tileSize; }
+    int getTileSize()
+    {
+        return m_tileSize;
+    }
 
-    const std::vector<std::vector<int> >& getTileIDs() { return m_tileIDs; }
+    const std::vector<std::vector<int> >& getTileIDs()
+    {
+        return m_tileIDs;
+    }
 
-    const Vector2D getPosition() { return m_position; }
+    const Vector2D getPosition()
+    {
+        return m_position;
+    }
 
-    int getMapWidth() { return m_mapWidth; }
+    int getMapWidth()
+    {
+        return m_mapWidth;
+    }
 
 private:
     int m_numColumns;

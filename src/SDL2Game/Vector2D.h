@@ -11,17 +11,33 @@ public:
     Vector2D(float x = 0, float y = 0) : m_x(x), m_y(y) {}
     Vector2D(const Vector2D& v) : m_x(v.m_x), m_y(v.m_y) {}
 
-    float getX() { return m_x; }
-    float getY() { return m_y; }
+    float getX()
+    {
+        return m_x;
+    }
+    float getY()
+    {
+        return m_y;
+    }
 
-    void setX(float x) { m_x = x; }
-    void setY(float y) { m_y = y; }
+    void setX(float x)
+    {
+        m_x = x;
+    }
+    void setY(float y)
+    {
+        m_y = y;
+    }
 
-    float length() { return sqrt(m_x * m_x + m_y * m_y); }
+    float length()
+    {
+        return sqrt(m_x * m_x + m_y * m_y);
+    }
 
     void normalize()
     {
         float len = length();
+
         if (len > 0) {
             (*this) *= (1 / len);
         }
@@ -35,7 +51,6 @@ public:
 
         m_x = v.m_x;
         m_y = v.m_y;
-
         return *this;
     }
 
@@ -43,7 +58,6 @@ public:
     {
         m_x += v.m_x;
         m_y += v.m_y;
-
         return *this;
     }
 
@@ -61,7 +75,6 @@ public:
     {
         m_x *= scalar;
         m_y *= scalar;
-
         return *this;
     }
 
@@ -74,7 +87,6 @@ public:
     {
         m_x /= scalar;
         m_y /= scalar;
-
         return *this;
     }
 
@@ -82,7 +94,6 @@ public:
     {
         m_x -= v.m_x;
         m_y -= v.m_y;
-
         return *this;
     }
 

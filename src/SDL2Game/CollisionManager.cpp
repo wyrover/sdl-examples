@@ -125,10 +125,8 @@ void CollisionManager::checkPlayerEnemyCollision(Player* pPlayer, const std::vec
     pRect1->w = pPlayer->getWidth();
     pRect1->h = pPlayer->getHeight();
 
-    for(int i = 0; i < objects.size(); i++)
-    {
-        if(objects[i]->type() != std::string("Enemy") || !objects[i]->updating())
-        {
+    for (int i = 0; i < objects.size(); i++) {
+        if (objects[i]->type() != std::string("Enemy") || !objects[i]->updating()) {
             continue;
         }
 
@@ -138,10 +136,8 @@ void CollisionManager::checkPlayerEnemyCollision(Player* pPlayer, const std::vec
         pRect2->w = objects[i]->getWidth();
         pRect2->h = objects[i]->getHeight();
 
-        if(RectRect(pRect1, pRect2))
-        {
-            if(!objects[i]->dead() && !objects[i]->dying())
-            {
+        if (RectRect(pRect1, pRect2)) {
+            if (!objects[i]->dead() && !objects[i]->dying()) {
                 pPlayer->collision();
             }
         }

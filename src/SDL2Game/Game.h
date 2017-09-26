@@ -27,28 +27,64 @@ public:
     void clean();
 
     GAME_STATUS_TAG init(const char* title, int xpos, int ypos,
-        int width, int height, int flags);
+                         int width, int height, int flags);
 
-    bool running() { return m_bRunning; }
+    bool running()
+    {
+        return m_bRunning;
+    }
 
-    SDL_Renderer* getRenderer() const { return m_pRenderer; }
+    SDL_Renderer* getRenderer() const
+    {
+        return m_pRenderer;
+    }
 
-    GameStateMachine* getStateMachine() { return m_pGameStateMachine; }
+    GameStateMachine* getStateMachine()
+    {
+        return m_pGameStateMachine;
+    }
 
-    int getGameWidth() const { return m_gameWidth; }
-    int getGameHeight() const { return m_gameHeight; }
-    float getScrollSpeed() { return m_scrollSpeed; }
+    int getGameWidth() const
+    {
+        return m_gameWidth;
+    }
+    int getGameHeight() const
+    {
+        return m_gameHeight;
+    }
+    float getScrollSpeed()
+    {
+        return m_scrollSpeed;
+    }
 
-    void setPlayerLives(int lives) { m_playerLives = lives; }
-    int getPlayerLives() { return m_playerLives; }
+    void setPlayerLives(int lives)
+    {
+        m_playerLives = lives;
+    }
+    int getPlayerLives()
+    {
+        return m_playerLives;
+    }
 
     void setCurrentLevel(int currentLevel);
-    const int getCurrentLevel() { return m_currentLevel; }
+    const int getCurrentLevel()
+    {
+        return m_currentLevel;
+    }
 
-    void setLevelComplete(bool levelComplete) { m_bLevelComplete = levelComplete; }
-    const bool getLevelComplete() { return m_bLevelComplete; }
+    void setLevelComplete(bool levelComplete)
+    {
+        m_bLevelComplete = levelComplete;
+    }
+    const bool getLevelComplete()
+    {
+        return m_bLevelComplete;
+    }
 
-    std::vector<std::string> getLevelFiles() { return m_levelFiles; }
+    std::vector<std::string> getLevelFiles()
+    {
+        return m_levelFiles;
+    }
 
 private:
     Game();

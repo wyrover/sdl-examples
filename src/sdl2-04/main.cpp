@@ -73,9 +73,8 @@ bool InitSDL()
 }
 bool CreateWindow()
 {
-	
     //window = SDL_CreateWindow("Server", posX, posY, sizeX, sizeY, 0);
-	 window = SDL_CreateWindow("Server", posX, posY, sizeX, sizeY, 0);
+    window = SDL_CreateWindow("Server", posX, posY, sizeX, sizeY, 0);
 
     if (window == nullptr) {
         std::cout << "Failed to create window : " << SDL_GetError();

@@ -19,7 +19,10 @@ public:
     virtual void render();
 
     // return a pointer to this layers objects, the level parser will fill this
-    std::vector<GameObject*>* getGameObjects() { return &m_gameObjects; }
+    std::vector<GameObject*>* getGameObjects()
+    {
+        return &m_gameObjects;
+    }
 
 private:
 

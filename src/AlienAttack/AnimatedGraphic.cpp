@@ -12,7 +12,6 @@ using namespace std;
 
 AnimatedGraphic::AnimatedGraphic() : ShooterObject()
 {
-    
 }
 
 void AnimatedGraphic::load(std::unique_ptr<LoaderParams> const &pParams)

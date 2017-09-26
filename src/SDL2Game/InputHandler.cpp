@@ -18,7 +18,6 @@ InputHandler::~InputHandler()
 {
     delete m_mousePosition;
     delete m_keystate;
-
     m_joystickValues.clear();
     m_joysticks.clear();
     m_mouseButtonStates.clear();
@@ -33,16 +32,16 @@ void InputHandler::initialiseJoysticks()
     if (SDL_NumJoysticks() > 0) {
         for (int i = 0; i < SDL_NumJoysticks(); i++) {
             SDL_Joystick* joy = SDL_JoystickOpen(i);
+
             if (SDL_JoystickOpen(i)) {
                 std::cout << "name:" << SDL_JoystickName(joy) << std::endl;
                 std::cout << "axes:" << SDL_JoystickNumAxes(joy) << std::endl;
                 std::cout << "button:" << SDL_JoystickNumButtons(joy) << std::endl;
-
                 m_joysticks.push_back(joy);
                 m_joystickValues.push_back(std::make_pair(new Vector2D(0, 0),
-                    new Vector2D(0, 0)));
-
+                                           new Vector2D(0, 0)));
                 std::vector<bool> tempButtons;
+
                 for (int i = 0; i < SDL_JoystickNumButtons(joy); i++) {
                     tempButtons.push_back(false);
                 }
@@ -119,37 +118,45 @@ bool InputHandler::isKeyDown(SDL_Scancode key)
 void InputHandler::update()
 {
     SDL_Event event;
-    if (SDL_PollEvent(&event))
-    {
-        switch (event.type)
-        {
+
+    if (SDL_PollEvent(&event)) {
+        switch (event.type) {
         case SDL_QUIT:
             TheGame::Instance()->quit();
             break;
+
         case SDL_JOYAXISMOTION:
             onJoystickAxisMove(event);
             break;
+
         case SDL_JOYBUTTONDOWN:
             onJoystickButtonDown(event);
             break;
+
         case SDL_JOYBUTTONUP:
             onJoystickButtonUp(event);
             break;
+
         case SDL_MOUSEBUTTONDOWN:
             onMouseButtonDown(event);
             break;
+
         case SDL_MOUSEBUTTONUP:
             onMouseButtonUp(event);
             break;
+
         case SDL_MOUSEMOTION:
             onMouseMove(event);
             break;
+
         case SDL_KEYDOWN:
             onKeyDown();
             break;
+
         case SDL_KEYUP:
             onKeyUp();
             break;
+
         default:
             break;
         }
@@ -164,6 +171,7 @@ void InputHandler::onJoystickAxisMove(SDL_Event& event)
     std::cout << "jaxis:" << event.jaxis.which << std::endl;
     std::cout << "axis:" << axis << std::endl;
     std::cout << "value:" << value << std::endl;
+
     //left stick move left or right
     if (axis == 0) {
         if (value > m_joystickDeadZone) {

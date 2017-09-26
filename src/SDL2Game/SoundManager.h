@@ -5,8 +5,7 @@
 #include <map>
 #include "SDL_mixer.h"
 
-enum sound_type
-{
+enum sound_type {
     SOUND_MUSIC = 0,
     SOUND_SFX = 1
 };

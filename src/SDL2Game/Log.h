@@ -1,5 +1,4 @@
-typedef enum
-{
+typedef enum {
     GAME_INIT_SUCCESS = 0,
 
     GAME_ERROR_SDL_INIT_FAIL,

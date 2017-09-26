@@ -3,12 +3,10 @@
 
 MenuButton::MenuButton() : PlatformerObject()
 {
-
 }
 
 void MenuButton::draw()
 {
-
     PlatformerObject::draw();
 }
 
@@ -19,8 +17,7 @@ void MenuButton::update()
     if (pMousePos->getX() < (m_position.getX() + m_width)
         && pMousePos->getX() > m_position.getX()
         && pMousePos->getY() < (m_position.getY() + m_height)
-        && pMousePos->getY() > m_position.getY())
-    {
+        && pMousePos->getY() > m_position.getY()) {
         if (TheInputHandler::Instance()->getMouseButtonState(LEFT) == true && m_bReleased) {
             m_currentFrame = CLICKED;
             m_callback();

@@ -6,8 +6,7 @@
 
 #include "Vector2D.h"
 
-enum mouse_buttons
-{
+enum mouse_buttons {
     LEFT = 0,
     MIDDLE = 1,
     RIGHT = 2
@@ -30,22 +29,26 @@ public:
     void reset();
 
     void initialiseJoysticks();
-    bool joystickInitialised() {
+    bool joystickInitialised()
+    {
         return m_bJoysticksInitialised;
     }
 
     int xvalue(int joy, int stick);
     int yvalue(int joy, int stick);
 
-    bool getButtonState(int joy, int buttonNumber) {
+    bool getButtonState(int joy, int buttonNumber)
+    {
         return m_buttonStates[joy][buttonNumber];
     }
 
-    bool getMouseButtonState(int buttonNumber) {
+    bool getMouseButtonState(int buttonNumber)
+    {
         return m_mouseButtonStates[buttonNumber];
     }
 
-    Vector2D* getMousePosition() {
+    Vector2D* getMousePosition()
+    {
         return m_mousePosition;
     }
 
