@@ -88,7 +88,6 @@ void Game::Run()
             framecount = 0;
             //std::cout << "FPS: " << fps << std::endl;
             char buf[100];
-            
             _snprintf(buf, 100, "Breakout Example - Rembound.com (fps: %u)", fps);
             SDL_SetWindowTitle(window, buf);
         } else {

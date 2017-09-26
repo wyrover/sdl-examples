@@ -13,7 +13,8 @@
 // Define a ball speed in pixels per second
 const float BALL_SPEED = 900;
 
-class Ball: public Entity {
+class Ball: public Entity
+{
 public:
     Ball(SDL_Renderer* renderer);
     ~Ball();

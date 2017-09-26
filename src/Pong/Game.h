@@ -19,7 +19,8 @@
 #define FPS_DELAY 500
 #define AI_SPEED 400 // Pixels per second
 
-class Game {
+class Game
+{
 public:
     Game();
     ~Game();

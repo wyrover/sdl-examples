@@ -10,7 +10,8 @@
 #include "SDL.h"
 #include "SDL_image.h"
 
-class Entity {
+class Entity
+{
 public:
     Entity(SDL_Renderer* renderer);
     virtual ~Entity();

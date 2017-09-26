@@ -11,7 +11,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-class Board: public Entity {
+class Board: public Entity
+{
 public:
     Board(SDL_Renderer* renderer);
     ~Board();

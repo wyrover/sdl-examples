@@ -9,7 +9,8 @@
 
 #include "Entity.h"
 
-class Paddle: public Entity {
+class Paddle: public Entity
+{
 public:
     Paddle(SDL_Renderer* renderer);
     ~Paddle();
