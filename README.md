@@ -13,6 +13,7 @@
 - 11. 缩放屏幕
 - 12. 更新纹理
 
+- http://headerphile.com/
 - http://www.grhmedia.com/tutorials_SDL2.html
 - [sdl2 + opengl](https://gist.github.com/haxpor/8cd82700b5b6d0a40702901c6bbd6757)
 - http://www.aaroncox.net/tutorials/2dtutorials/index.html
@@ -22,6 +23,8 @@
 - http://headerphile.com/category/sdl2/page/2/
 - http://rembound.com/articles
 - https://github.com/gametutorials/tutorials
+- http://www.cnblogs.com/CodeMIRACLE/p/5516841.html
+- http://www.cnblogs.com/bombless/archive/2010/11/21/SDL-using-chinese-character.html
 
 ## src/hello-sdl2
 
